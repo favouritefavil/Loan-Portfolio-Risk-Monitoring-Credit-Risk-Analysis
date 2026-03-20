@@ -1,0 +1,2 @@
+# Loan-Portfolio-Risk-Monitoring-Credit-Risk-Analysis
+This project delivers a complete, end-to-end credit risk analysis of a consumer lending portfolio using the LendingClub dataset. It simulates the work of a credit risk analyst responsible for portfolio monitoring and risk reporting covering data preparation, SQL-based segmentation, loss exposure analysis, and interactive dashboard visualisation.
