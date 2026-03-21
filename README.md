@@ -28,7 +28,7 @@
 
 ## Introduction
 
-This project delivers a complete, end-to-end credit risk analysis of a consumer lending portfolio using the LendingClub dataset. It simulates the work of a **credit risk analyst responsible for portfolio monitoring and risk reporting** — covering data preparation, SQL-based segmentation, loss exposure analysis, and interactive dashboard visualisation.
+This project delivers a complete, end-to-end credit risk analysis of a consumer lending portfolio using the LendingClub dataset. It simulates the work of a **credit risk analyst responsible for portfolio monitoring and risk reporting** covering data preparation, SQL-based segmentation, loss exposure analysis, and interactive dashboard visualisation.
 
 The project was built using **PostgreSQL** for data engineering and analysis, and **Power BI** for dashboard development and portfolio monitoring.
 
@@ -36,7 +36,7 @@ The project was built using **PostgreSQL** for data engineering and analysis, an
 
 ## Business Problem
 
-Lending institutions face a constant challenge: growing their loan book while keeping credit risk under control. Without structured monitoring, portfolios accumulate high-risk borrowers and concentration in vulnerable segments — often before the problem is visible in headline metrics.
+Lending institutions face a constant challenge: growing their loan book while keeping credit risk under control. Without structured monitoring, portfolios accumulate high-risk borrowers and concentration in vulnerable segments often before the problem is visible in headline metrics.
 
 This project addresses four core business questions:
 
@@ -50,10 +50,10 @@ This project addresses four core business questions:
 - 1 in 5 loans defaulted (≈20% default rate)
 - Total portfolio exposure: **$19B**
 - Estimated loss exposure: **$4B**
-- **Grade C is the largest loss driver ($1.3B)** — not the highest-risk grade
+- **Grade C is the largest loss driver ($1.3B)** not the highest-risk grade
 - **Debt consolidation accounts for 58% of loans and $2.7B in losses**
 
-> This project analyses where risk actually comes from — not just who defaults, but where the money is lost.
+> This project analyses where risk actually comes from, not just who defaults, but where the money is lost.
 
 ---
 
@@ -115,7 +115,7 @@ Four derived variables were created to enable meaningful risk segmentation:
 
 **Design rationale:**
 
-- **DTI bands** align with institutional lending thresholds — the 35% upper boundary reflects the qualified mortgage DTI limit used in regulated lending
+- **DTI bands** align with institutional lending thresholds, the 35% upper boundary reflects the qualified mortgage DTI limit used in regulated lending
 - **Income segments** use breakpoints at $30K, $60K, and $100K to capture meaningful repayment capacity differences
 - **Employment length** was later grouped into five bands (Unknown, <1 year, 1–5 years, 6–9 years, 10+ years) after identifying that unmapped records — defaulting at 26.92% — required explicit handling as a risk flag
 
@@ -142,7 +142,7 @@ The analysis was structured across **eleven SQL queries** covering three analyti
 - loss exposure by DTI risk band
 - loss exposure by loan purpose
 
-loss exposure was calculated as the sum of loan amounts for all defaulted loans within each segment, expressed in millions. This serves as a gross loss proxy — an upper-bound estimate assuming 100% loss given default with no recovery.
+loss exposure was calculated as the sum of loan amounts for all defaulted loans within each segment, expressed in millions. This serves as a gross loss proxy, an upper-bound estimate assuming 100% loss given default with no recovery.
 
 ---
 
@@ -225,22 +225,22 @@ Six interactive filters — grade, purpose, income group, DTI risk band, and yea
 ## Key Insights
 
 **1. The portfolio carries $4bn in gross loss exposure on a 20% default rate.**  
-At $19bn in total exposure, a 1-percentage-point change in the default rate is worth approximately $194M in losses. Segment-level monitoring is not optional at this scale — it is a loss prevention strategy.
+At $19bn in total exposure, a 1-percentage-point change in the default rate is worth approximately $194M in losses. Segment-level monitoring is not optional at this scale,it is a loss prevention strategy.
 
-**2. Credit grade is the strongest single risk predictor — by a wide margin.**  
+**2. Credit grade is the strongest single risk predictor by a wide margin.**  
 The 44-point spread from Grade A (6%) to Grade G (50%) is larger than the combined spread of all other segmentation variables. No other single characteristic separates borrowers as clearly as the assigned credit grade.
 
 **3. The highest default rate segments are not the largest loss generators.**  
-Grade G defaults at 50% but generates just $0.1bn in losses. Grade C defaults at 22% but generates $1.3bn — the most of any grade. The same pattern holds for DTI and income. Rate risk and dollar loss risk are different problems requiring different management responses.
+Grade G defaults at 50% but generates just $0.1bn in losses. Grade C defaults at 22% but generates $1.3bn, the most of any grade. The same pattern holds for DTI and income. Rate risk and dollar loss risk are different problems requiring different management responses.
 
 **4. Debt consolidation is the portfolio's single largest financial risk.**  
-One loan purpose — 58% of the portfolio — generates $2.7bn in loss exposurees. That is more than three times the next largest category. The portfolio's financial health is structurally dependent on how well debt consolidation borrowers perform.
+One loan purpose, 58% of the portfolio, generates $2.7bn in loss exposurees. That is more than three times the next largest category. The portfolio's financial health is structurally dependent on how well debt consolidation borrowers perform.
 
 **5. The 2015–2016 period was a genuine stress event.**  
 Both the default rate trend and the loss exposure trend spike in the same window. This was not a data artefact. Default rates reached approximately 27–28% before declining through 2018, confirming a period of material portfolio deterioration.
 
 **6. Low-DTI borrowers generate more dollar loss than High-DTI borrowers.**  
-The Low-DTI band holds 60% of all loans and $11.5bn in exposure. At a 17% default rate, it still generates $2.1bn in losses — more than the High-DTI band at $0.2bn. Volume at scale turns even below-average default rates into large absolute losses.
+The Low-DTI band holds 60% of all loans and $11.5bn in exposure. At a 17% default rate, it still generates $2.1bn in losses ,more than the High-DTI band at $0.2bn. Volume at scale turns even below-average default rates into large absolute losses.
 
 ---
 
@@ -248,7 +248,7 @@ The Low-DTI band holds 60% of all loans and $11.5bn in exposure. At a 17% defaul
 
 ### Credit Policy
 
-- **Restrict Grades E, F, and G** — require lower loan amounts, shorter terms, and mandatory income verification. Grade D or below combined with High DTI should trigger mandatory review before approval.
+- **Restrict Grades E, F, and G** - require lower loan amounts, shorter terms, and mandatory income verification. Grade D or below combined with High DTI should trigger mandatory review before approval.
 - **Apply DTI limits at origination** — applications above DTI 35 should require a compensating factor (stronger grade or reduced loan amount) to proceed.
 - **Treat missing employment data as a risk flag** — the Unknown employment group defaults at 26.92%, seven points above the portfolio average. Verified employment should be required above a minimum loan threshold.
 - **Introduce income-adjusted loan sizing** — link maximum approved amounts to a multiple of verified annual income, particularly for borrowers under $30K.
