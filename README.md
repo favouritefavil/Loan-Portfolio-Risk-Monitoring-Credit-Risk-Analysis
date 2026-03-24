@@ -117,7 +117,7 @@ Four derived variables were created to enable meaningful risk segmentation:
 
 - **DTI bands** align with institutional lending thresholds, the 35% upper boundary reflects the qualified mortgage DTI limit used in regulated lending
 - **Income segments** use breakpoints at $30K, $60K, and $100K to capture meaningful repayment capacity differences
-- **Employment length** was later grouped into five bands (Unknown, <1 year, 1–5 years, 6–9 years, 10+ years) after identifying that unmapped records — defaulting at 26.92% — required explicit handling as a risk flag
+- **Employment length** was later grouped into five bands (Unknown, <1 year, 1–5 years, 6–9 years, 10+ years) after identifying that unmapped records defaulting at 26.92% required explicit handling as a risk flag
 
 ---
 
@@ -152,7 +152,7 @@ The Power BI dashboard is structured across three pages, each addressing a disti
 
 > **1.3M Loans | $19bn Total Exposure | $14K Average Loan | 20% Default Rate | $4bn Loss Exposure**
 
-Six interactive filters — grade, purpose, income group, DTI risk band, and year — allow segment-level drilling across all visuals.
+Six interactive filters grade, purpose, income group, DTI risk band, and year allow segment-level drilling across all visuals.
 
 ---
 
@@ -162,9 +162,9 @@ Six interactive filters — grade, purpose, income group, DTI risk band, and yea
 
 | Visual | What It Shows |
 |---|---|
-| Loan Distribution by Purpose (bar) | All 14 loan purposes ordered by volume — debt consolidation dominates at 779K loans (58%) |
-| Loan Volume & Exposure Over Time (dual-axis) | Annual origination bars with total exposure line — shows the full 2008–2018 growth and decline cycle |
-| Loan Distribution by Income Group (bar) | Lower Middle income leads at 539K; Upper Middle at 477K — together 76% of the portfolio |
+| Loan Distribution by Purpose (bar) | All 14 loan purposes ordered by volume debt consolidation dominates at 779K loans (58%) |
+| Loan Volume & Exposure Over Time (dual-axis) | Annual origination bars with total exposure line shows the full 2008–2018 growth and decline cycle |
+| Loan Distribution by Income Group (bar) | Lower Middle income leads at 539K; Upper Middle at 477K together 76% of the portfolio |
 | Loan Distribution by Employment Length (bar) | 1–5 years (482K) and 10+ years (442K) are the dominant tenure groups |
 
 **Key takeaway:** This is a middle-income, employed borrower portfolio, heavily concentrated in debt consolidation, that peaked in 2015 and has contracted since.
@@ -177,13 +177,13 @@ Six interactive filters — grade, purpose, income group, DTI risk band, and yea
 
 | Visual | What It Shows |
 |---|---|
-| Default Rate by Credit Grade (column) | G-to-A gradient: 50% → 6%, a 44-point spread — credit grade is the dominant risk predictor |
-| Default Rate by DTI Risk Band (bar) | High (31%) vs Low (17%) — nearly double across the leverage spectrum |
+| Default Rate by Credit Grade (column) | G-to-A gradient: 50% → 6%, a 44-point spread credit grade is the dominant risk predictor |
+| Default Rate by DTI Risk Band (bar) | High (31%) vs Low (17%) nearly double across the leverage spectrum |
 | Default Rate by Income Group (bar) | Ordered highest-to-lowest: Low income (24%) → High income (16%) |
 | Default Rate by Top 5 Loan Purpose (bar) | Small business leads at 30%; renewable energy 24%; moving 23% |
 | Default Rate Trend Over Time (line) | ~20% average, spiking to ~27–28% in 2015–2016, declining sharply to 2018 |
 
-**Key takeaway:** Credit grade is the sharpest risk dividing line. DTI and income reinforce the picture — higher leverage and lower income consistently predict higher default, but nothing separates borrowers as clearly as the assigned grade.
+**Key takeaway:** Credit grade is the sharpest risk dividing line. DTI and income reinforce the picture higher leverage and lower income consistently predict higher default, but nothing separates borrowers as clearly as the assigned grade.
 
 ---
 
@@ -193,10 +193,10 @@ Six interactive filters — grade, purpose, income group, DTI risk band, and yea
 
 | Visual | What It Shows |
 |---|---|
-| Loss Exposure by Credit Grade (column) | Grade C leads at $1.3bn — not Grade G, which is last at $0.1bn |
+| Loss Exposure by Credit Grade (column) | Grade C leads at $1.3bn not Grade G, which is last at $0.1bn |
 | Loss Exposure by DTI Risk Band (bar) | Low DTI leads at $2.1bn despite the lowest default rate |
 | Loss Exposure by Income Group (bar) | Upper Middle leads at $1.7bn; Low income last at $0.1bn |
-| Loss Exposure by Top 6 Purpose (bar) | Debt consolidation at $2.7bn — more than 3× the next category |
+| Loss Exposure by Top 6 Purpose (bar) | Debt consolidation at $2.7bn more than 3× the next category |
 | Loss Exposure Trend Over Time (line) | Mirrors the default rate spike, confirming the 2015–2016 event in financial terms |
 
 **Key takeaway:** Volume drives dollar losses, not default rate alone. The segments with the highest default rates (Grades G, F, E; High DTI) generate the smallest absolute losses because their loan counts are small. Grade C, debt consolidation, and the Low-DTI band are where the real money is at risk.
@@ -249,62 +249,59 @@ The Low-DTI band holds 60% of all loans and $11.5bn in exposure. At a 17% defaul
 
 ### Credit Policy
 
-- **Restrict Grades E, F, and G** - require lower loan amounts, shorter terms, and mandatory income verification. Grade D or below combined with High DTI should trigger mandatory review before approval.
-- **Apply DTI limits at origination** — applications above DTI 35 should require a compensating factor (stronger grade or reduced loan amount) to proceed.
-- **Treat missing employment data as a risk flag** — the Unknown employment group defaults at 26.92%, seven points above the portfolio average. Verified employment should be required above a minimum loan threshold.
-- **Introduce income-adjusted loan sizing** — link maximum approved amounts to a multiple of verified annual income, particularly for borrowers under $30K.
+- **Restrict Grades E, F, and G:** require lower loan amounts, shorter terms, and mandatory income verification. Grade D or below combined with High DTI should trigger mandatory review before approval.
+- **Apply DTI limits at origination:**  applications above DTI 35 should require a compensating factor (stronger grade or reduced loan amount) to proceed.
+- **Treat missing employment data as a risk flag:**  the Unknown employment group defaults at 26.92%, seven points above the portfolio average. Verified employment should be required above a minimum loan threshold.
+- **Introduce income-adjusted loan sizing:**  link maximum approved amounts to a multiple of verified annual income, particularly for borrowers under $30K.
 
 ### Portfolio Strategy
 
-- **Reduce debt consolidation concentration** — set an internal cap at 50% for any single loan purpose and actively encourage growth in lower-risk categories such as credit card refinancing (16.92%) and car loans (14.69%).
-- **Shift origination toward Grades A and B** — increase their combined portfolio share from 46.69% to a target of 55% over two years. The loss exposure reduction outweighs the yield cost at the margin.
-- **Monitor the 2014–2016 vintage** — loans originated during the peak stress period that have not yet fully resolved should be tracked separately for residual risk.
+- **Reduce debt consolidation concentration:**  set an internal cap at 50% for any single loan purpose and actively encourage growth in lower-risk categories such as credit card refinancing (16.92%) and car loans (14.69%).
+- **Shift origination toward Grades A and B:**  increase their combined portfolio share from 46.69% to a target of 55% over two years. The loss exposure reduction outweighs the yield cost at the margin.
+- **Monitor the 2014–2016 vintage:**  loans originated during the peak stress period that have not yet fully resolved should be tracked separately for residual risk.
 
 ### Risk Monitoring
 
-- **Build a grade migration matrix** — tracking borrower movement between grades month-on-month provides early warning of deteriorating credit quality before defaults appear.
-- **Set segment-level alert thresholds** — including: any grade default rate rising more than 3 percentage points quarter-on-quarter; debt consolidation exceeding 23%; High-DTI band exceeding 35%.
-- **Report loss exposure monthly** — connecting the dashboard to a monthly-refreshed data source converts it from a retrospective tool into a live monitoring system.
+- **Build a grade migration matrix:** tracking borrower movement between grades month-on-month provides early warning of deteriorating credit quality before defaults appear.
+- **Set segment-level alert thresholds:** including: any grade default rate rising more than 3 percentage points quarter-on-quarter; debt consolidation exceeding 23%; High-DTI band exceeding 35%.
+- **Report loss exposure monthly:** connecting the dashboard to a monthly-refreshed data source converts it from a retrospective tool into a live monitoring system.
 
 ### Data Improvements
 
-- **Mandate employment verification** — eliminating the Unknown employment category removes a risk blind spot that currently covers 77,527 loans.
-- **Add delinquency history fields** — 30-day and 60-day past due counts would enable early warning analysis, which is currently impossible with outcome-only data.
-- **Include interest rate and loan term** — both are available in the source dataset and would add material analytical depth to future iterations of this analysis.
+- **Mandate employment verification:**  eliminating the Unknown employment category removes a risk blind spot that currently covers 77,527 loans.
+- **Add delinquency history fields:** 30-day and 60-day past due counts would enable early warning analysis, which is currently impossible with outcome-only data.
+- **Include interest rate and loan term:**  Adding these would add material analytical depth to future iterations of this analysis.
 
 ---
 
 ## Limitations
 
-**1. loss exposure is a gross approximation.**  
-Loss figures assume 100% Loss Given Default (LGD) with no recovery. Consumer loan recovery rates typically range from 20–60%, meaning actual net losses are lower than reported. All loss figures should be treated as upper-bound estimates.
-
-**2. No forward-looking probability of default model.**  
+**1. No forward-looking probability of default model.**  
 Default rates are observed historical frequencies, not modelled predictions. They cannot be applied directly as credit scores or pricing inputs for new originations without additional modelling work.
 
-**3. Closed historical period (2007–2018).**  
-The dataset reflects a specific economic cycle. Default patterns — including the 2015–2016 stress event — may not represent current or future portfolio behaviour.
+**2. Closed historical period (2007–2018).**  
+The dataset reflects a specific economic cycle. Default patterns — including the 2015–2016 stress event, may not represent current or future portfolio behaviour.
 
-**4. No payment history data.**  
+**3. No payment history data.**  
 Only final loan outcomes are recorded. The absence of intermediate delinquency data prevents early warning analysis and limits the framework to outcome-based risk measurement.
 
-**5. Scoped variable selection.**  
-10 of 150+ available variables were used. Excluded fields — including interest rate, number of open credit lines, and public derogatory records — may carry additional predictive power not captured here.
+**4. Scoped variable selection.**  
+10 of 150+ available variables were used. Excluded fields, including number of open credit lines, and public derogatory records, may carry additional predictive power not captured here.
 
-**6. Self-reported borrower data.**  
+**5. Self-reported borrower data.**  
 Income, employment length, and loan purpose are self-reported and unverified. Overstated income in particular could cause the analysis to understate true default risk in lower income segments.
 
 ---
 
 ## Conclusion
 
-This project produced a complete credit risk analysis of a 1.3 million loan consumer portfolio — covering data preparation, SQL-based risk segmentation, loss exposure quantification, and interactive dashboard monitoring.
+This project produced a complete credit risk analysis of a 1.3 million loan consumer portfolio, covering data preparation, SQL-based risk segmentation, loss exposure quantification, and interactive dashboard monitoring.
 
-The analysis surfaces three findings with direct business implications. First, credit grade is the dominant risk predictor and should anchor all credit policy decisions. Second, dollar loss risk is determined by volume and exposure, not default rate alone — Grade C and debt consolidation are the segments that matter most financially, not the extreme-grade tail. Third, the portfolio carries significant concentration risk in a single loan purpose that a stress scenario could expose rapidly.
+The analysis surfaces three findings with direct business implications. First, credit grade is the dominant risk predictor and should anchor all credit policy decisions. Second, dollar loss risk is determined by volume and exposure, not default rate alone, Grade C and debt consolidation are the segments that matter most financially, not the extreme-grade tail. Third, the portfolio carries significant concentration risk in a single loan purpose that a stress scenario could expose rapidly.
 
-The methodology — separating rate risk from loss risk, tracking loss exposure by segment, and building an interactive monitoring framework — is directly transferable to any consumer lending portfolio.
+The methodology:  separating rate risk from loss risk, tracking loss exposure by segment, and building an interactive monitoring framework is directly transferable to any consumer lending portfolio.
 
-> *In a $19 billion portfolio, knowing which segments to watch is not a reporting exercise — it is a loss prevention strategy.*
+> *In a $19 billion portfolio, knowing which segments to watch is not a reporting exercise, it is a loss prevention strategy.*
 
 ---
 
@@ -320,9 +317,6 @@ lending-credit-risk-analysis/
 │   ├── 04_risk_segmentation.sql      # Default rates by grade, DTI, income, purpose
 │   └── 05_loss_exposure.sql          # loss exposure by grade, DTI, purpose
 │
-├── dashboard/
-│   └── Credit_Risk_Dashboard.pbix    # Power BI dashboard file (3 pages)
-│
 ├── images/
 │   ├── Portfolio_Overview.png        # Dashboard Page 1 screenshot
 │   ├── Risk_Driver_Analysis.png      # Dashboard Page 2 screenshot
@@ -335,10 +329,10 @@ lending-credit-risk-analysis/
 
 ## 💡 Key Takeaway
 
-> High default rates do not always drive the largest losses — portfolio exposure and borrower volume are the true drivers of financial risk.
+> High default rates do not always drive the largest losses, portfolio exposure and borrower volume are the true drivers of financial risk.
 
 ---
 
-*Project by Favour Chegwe — Data Analyst*  
+*Project by Favour Chegwe - Data Analyst*  
 *Tools: PostgreSQL · Power BI · DAX*  
 *Dataset: LendingClub (public)*
