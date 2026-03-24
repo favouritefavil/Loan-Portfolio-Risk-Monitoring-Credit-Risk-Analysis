@@ -206,7 +206,8 @@ Six interactive filters — grade, purpose, income group, DTI risk band, and yea
 ## Dashboard Preview
 
 ### Page 1 — Portfolio Overview
-<img width="1266" height="719" alt="Portfolio Overview" src="https://github.com/user-attachments/assets/82687b49-8523-4aa3-8bb8-7dfa9a4373fa" />
+<img width="1267" height="720" alt="Portfolio Overview" src="https://github.com/user-attachments/assets/66741471-5b4d-4d5a-8060-eb2f5dc86f93" />
+
 
 
 ---
