@@ -1,4 +1,4 @@
-# Loan Portfolio Risk Monitoring & Credit Risk Analysis
+hi# Loan Portfolio Risk Monitoring & Credit Risk Analysis
 
 ![Project Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 ![Tool](https://img.shields.io/badge/Tool-PostgreSQL-blue)
@@ -280,7 +280,7 @@ The Low-DTI band holds 60% of all loans and $11.5bn in exposure. At a 17% defaul
 Default rates are observed historical frequencies, not modelled predictions. They cannot be applied directly as credit scores or pricing inputs for new originations without additional modelling work.
 
 **2. Closed historical period (2007–2018).**  
-The dataset reflects a specific economic cycle. Default patterns — including the 2015–2016 stress event, may not represent current or future portfolio behaviour.
+The dataset reflects a specific economic cycle. Default patterns including the 2015–2016 stress event, may not represent current or future portfolio behaviour.
 
 **3. No payment history data.**  
 Only final loan outcomes are recorded. The absence of intermediate delinquency data prevents early warning analysis and limits the framework to outcome-based risk measurement.
