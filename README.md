@@ -1,4 +1,4 @@
-hi# Loan Portfolio Risk Monitoring & Credit Risk Analysis
+# Loan Portfolio Risk Monitoring & Credit Risk Analysis
 
 ![Project Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 ![Tool](https://img.shields.io/badge/Tool-PostgreSQL-blue)
