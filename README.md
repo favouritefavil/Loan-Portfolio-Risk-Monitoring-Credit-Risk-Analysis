@@ -206,19 +206,19 @@ Six interactive filters grade, purpose, income group, DTI risk band, and year al
 ## Dashboard Preview
 
 ### Page 1 — Portfolio Overview
-<img width="1267" height="720" alt="Portfolio Overview" src="https://github.com/user-attachments/assets/66741471-5b4d-4d5a-8060-eb2f5dc86f93" />
+<img width="1267" height="722" alt="Portfolio Overview" src="https://github.com/user-attachments/assets/ea240c0a-989e-4fa9-8c4a-162e912443c8" />
 
 
 
 ---
 
 ### Page 2 — Risk Driver Analysis
-<img width="1266" height="719" alt="Risk Driver Analysis" src="https://github.com/user-attachments/assets/1b11a199-6725-4af3-b444-cfd5a50e08a4" />
+<img width="1266" height="720" alt="Risk Driver Analysis" src="https://github.com/user-attachments/assets/8551beca-a012-406a-891b-3bfcc3e448fa" />
 
 ---
 
 ### Page 3 — Loss Exposure Analysis
-<img width="1269" height="720" alt="Loss Exposure Analysis" src="https://github.com/user-attachments/assets/6c61ca34-8588-46bf-9bf5-c68600b89db1" />
+<img width="1270" height="720" alt="Loss Exposure Analysis" src="https://github.com/user-attachments/assets/3712b931-d4fe-4247-a684-c29e7f531121" />
 
 
 ---
